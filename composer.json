@@ -1,0 +1,45 @@
+{
+    "name": "omnilab/pubchem",
+    "type": "library",
+    "description": "Omnilab PubChem: a compound by CID, name, InChIKey, InChI, CAS number or SMILES - its computed properties with units (formula, weight, XLogP, TPSA...), synonyms, description, 2D structure image and its identifiers in ChEBI, ChEMBL, Wikidata, CAS, UNII, DSSTox and KEGG - through PubChem's PUG-REST, no key needed, at PubChem's pace.",
+    "keywords": [
+        "science",
+        "chemistry",
+        "pubchem",
+        "compounds",
+        "inchikey",
+        "cas",
+        "omnilab"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnilab": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnilab\\PubChem\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnilab\\PubChem\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

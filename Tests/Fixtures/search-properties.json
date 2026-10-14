@@ -1,0 +1,30 @@
+{
+  "PropertyTable": {
+    "Properties": [
+      {
+        "CID": 2519,
+        "MolecularFormula": "C8H10N4O2",
+        "MolecularWeight": "194.19",
+        "InChIKey": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+        "IUPACName": "1,3,7-trimethylpurine-2,6-dione",
+        "Title": "Caffeine"
+      },
+      {
+        "CID": 9871508,
+        "MolecularFormula": "C25H27N5O8",
+        "MolecularWeight": "525.5",
+        "InChIKey": "BKMBGNWZSQNIKU-UHFFFAOYSA-N",
+        "IUPACName": "2-acetyloxybenzoic acid;N-(4-hydroxyphenyl)acetamide;1,3,7-trimethylpurine-2,6-dione",
+        "Title": "Acetaminophen; Aspirin; Caffeine"
+      },
+      {
+        "CID": 56841593,
+        "MolecularFormula": "C45H56N8O10",
+        "MolecularWeight": "869.0",
+        "InChIKey": "BECAOSQOFABNLE-NLMNJOOOSA-N",
+        "IUPACName": "(4R,4aR,7S,7aR,12bS)-9-methoxy-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinolin-7-ol;N-(4-hydroxyphenyl)acetamide;5-(2-methylpropyl)-5-prop-2-enyl-1,3-diazinane-2,4,6-trione;1,3,7-trimethylpurine-2,6-dione",
+        "Title": "Acetaminophen; Butalbital; Caffeine; Codeine Phosphate"
+      }
+    ]
+  }
+}
