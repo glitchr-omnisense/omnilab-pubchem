@@ -1,6 +1,6 @@
 # omnilab/pubchem
 
-PubChem for [glitchr/omnilab](https://github.com/glitchr-studio/omnilab): a compound by its CID,
+PubChem for [omniscient/omnilab](https://github.com/glitchr-studio/omnilab): a compound by its CID,
 a name, an InChIKey, an InChI, a CAS number, a SMILES, or an identifier of another base PubChem
 keeps among its synonyms (ChEBI, ChEMBL, Wikidata, UNII, DSSTox); its computed properties with
 their units, its synonyms, its description, the image of its 2D structure, and its identifiers in
