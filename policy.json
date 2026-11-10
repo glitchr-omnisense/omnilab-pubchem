@@ -1,0 +1,57 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "pubchem",
+    "rateLimits": [
+        {
+            "max": 5,
+            "window": "second",
+            "every": 1,
+            "scope": "application",
+            "operations": [],
+            "note": "PubChem programmatic-access rule: no more than 5 requests per second."
+        },
+        {
+            "max": 400,
+            "window": "minute",
+            "every": 1,
+            "scope": "application",
+            "operations": [],
+            "note": "PubChem programmatic-access rule: no more than 400 requests per minute."
+        }
+    ],
+    "concurrency": null,
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {
+            "permission": "unknown",
+            "maxTtl": null
+        },
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {
+            "required": false,
+            "text": "PubChem, National Center for Biotechnology Information (NLM/NIH)",
+            "url": "https://pubchem.ncbi.nlm.nih.gov/",
+            "where": [
+                "source"
+            ]
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": false,
+        "userAgent": {
+            "required": false,
+            "pattern": null
+        }
+    },
+    "provenance": {
+        "terms": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "policy": "https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access",
+        "verifiedAt": null,
+        "declaredBy": "maintainer",
+        "contact": null,
+        "notes": "The PubChem docs pages (programmatic-access, dynamic-request-throttling) answered only a reCAPTCHA browser check on 2026-11-10 (curl, WebFetch and a headless browser alike), so verifiedAt is null: the 5/second and 400/minute figures are PubChem's long-published programmatic-access rule (a search-engine excerpt of that page confirmed the 5/second figure the same day). The same rule caps running time at 300 seconds of server time per minute and a request at 30 seconds; neither is expressible as a request count. PUG-REST answers carry X-Throttling-Control (seen live: \"Request Count status: Green (0%), Request Time status: Green (0%), Service status: Yellow (50%)\"); PubChem asks callers to slow down when it turns yellow/red, and blocks callers that keep exceeding. NCBI policies (read 2026-11-10): government-created content is public domain and NCBI places no restriction on the molecular data it holds, but depositors may hold rights in their contributions, so storage and redistribution stay unknown per record; NLM asks for acknowledgment (a request). The NCBI E-utilities rule (3 requests/second, email/tool parameters) on that page concerns E-utilities, not PUG-REST."
+    }
+}

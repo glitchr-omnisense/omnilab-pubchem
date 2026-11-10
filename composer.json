@@ -39,6 +39,11 @@
             "Omnilab\\PubChem\\Tests\\": "Tests/"
         }
     },
+    "extra": {
+        "omnisense": {
+            "policy": "policy.json"
+        }
+    },
     "config": {
         "sort-packages": true
     }

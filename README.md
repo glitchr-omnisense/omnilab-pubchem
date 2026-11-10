@@ -41,6 +41,17 @@ they deposited (each source's page on PubChem says), and NCBI's
 
 See [docs/](docs/index.md) for what is read, how it maps, and what PubChem does not give here.
 
+## Usage policy
+
+Declared as data in [`policy.json`](policy.json) (its pages could not be read on 2026-11-10 (https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access): see the notes in the file), and honoured on every request by the
+core: a limit reached waits when its window ends within `max_wait` seconds, else the request is not
+sent ([Usage policies](https://github.com/glitchr-omnisense/omnilab/blob/1.x/docs/policies.md)).
+
+- Limits: 5 a second; 400 a minute.
+- Licence: not stated; commercial use: unknown.
+- Credit: not required: PubChem, National Center for Biotechnology Information (NLM/NIH) (https://pubchem.ncbi.nlm.nih.gov/).
+- Needs: nothing.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or
