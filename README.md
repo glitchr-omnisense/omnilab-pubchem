@@ -29,6 +29,35 @@ omnilab:
                 throttle: 0.2                  # PubChem allows five calls a second: never lower
 ```
 
+## Install and a first call
+
+```sh
+composer require omnilab/pubchem
+```
+
+A real call, with no account and no key: caffeine in PubChem, by its CID (no synonyms nor
+description: one call less each). `mailto` is your address, sent in the User-Agent so that the
+service can reach you before it blocks a caller; the source keeps to the limits its
+[`policy.json`](policy.json) declares.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnilab\PubChem\PubChemSourceFactory;
+
+$pubchem = (new PubChemSourceFactory())->create(['mailto' => 'you@example.org', 'synonyms' => 0, 'description' => false]);   // your address, in the User-Agent
+$caffeine = $pubchem->entity('2519');
+echo $caffeine->label, ', ', $caffeine->value('molecular_formula'), ', ', $caffeine->property('molecular_weight'), "\n";
+```
+
+Its output on 2026-11-13:
+
+```
+Caffeine, C8H10N4O2, 194.19 g/mol
+```
+
 ## Terms of use
 
 PubChem is run by the NCBI (U.S. National Library of Medicine), free and without a key. Its
